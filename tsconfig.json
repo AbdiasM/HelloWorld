@@ -1,0 +1,15 @@
+﻿{
+  "files": [
+    "src/main.ts",
+    "routes/index.ts"
+  ],
+
+  "compilerOptions": {
+    "outDir": "./built",
+    "allowJs": true,
+    "target": "es5"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
