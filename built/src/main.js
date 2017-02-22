@@ -1,20 +1,20 @@
 "use strict";
 var express = require("Express");
-//import routes = require('./routes/index');
+var routes = require("../routes");
 var app = express();
 app.get('/', function (req, res) {
     res.json({ message: 'Hello! Welcome to Express' });
+    console.log("Hello using gulp");
 });
 app.get('/', function (req, res) {
     res.send('Hello World!');
 });
-app.get('/index', function (req, res) {
-    //res.type('html');
-    //res.sendFile("/views/index.html");
-    res.send("Express");
-    //var html = fs.readFileSync('./views/index.html', 'utf8')
-    //res.render('test', { html: html })
-});
+//app.get('/index', function (req, res) {
+//    //res.type('html');
+//    //res.sendFile("/views/index.html");
+//    res.send("Express");
+//});
+app.get('/index', routes.index);
 app.listen(7001);
 //class Menu {
 //    items: Array<string>;

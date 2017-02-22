@@ -1,22 +1,29 @@
 ﻿import express = require('Express');
-//import routes = require('./routes/index');
-
+import routes = require('../routes');
+import { sayHello } from './hello';
 var app = express();
-app.get('/', function (req, res) {
-    res.json({ message: 'Hello! Welcome to Express' });
-});
+
+//function showHello(divName: string, name: string) {
+//    const elt = document.getElementById(divName);
+//    elt.innerText = sayHello(name);
+//}
+
+//showHello("greeting", "TypeScript");
 
 app.get('/', function (req, res) {
-    res.send('Hello World!')
+    //res.json({ message: 'Hello! Welcome to Express' });
+    console.log("Hello using gulp");
+    const elt = document.getElementById("greeting");
+    elt.innerText = sayHello("Typescript");
 });
 
-app.get('/index', function (req, res) {
-    //res.type('html');
-    //res.sendFile("/views/index.html");
-    res.send("Express");
-    //var html = fs.readFileSync('./views/index.html', 'utf8')
-    //res.render('test', { html: html })
-});
+//app.get('/index', function (req, res) {
+//    //res.type('html');
+//    //res.sendFile("/views/index.html");
+//    res.send("Express");
+//});
+
+app.get('/index', routes.index);
 
 app.listen(7001);
 
@@ -41,7 +48,6 @@ app.listen(7001);
 //var sundayMenu = new Menu(["pancakes", "waffles", "orange juice"], 1);
 
 //sundayMenu.list();
-
 
 //import path = require('path');
 //import fs = require('fs');

@@ -2,7 +2,7 @@
 function index(req, res) {
     //res.type = "text/html";
     //res.sendFile('./views/index.html');
-    res.send('Express JS');
+    res.send('This is routed Index');
 }
+exports.index = index;
 ;
-module.exports = index;

@@ -1,6 +1,7 @@
 ﻿{
   "files": [
     "src/main.ts",
+    "src/hello.ts",
     "routes/index.ts"
   ],
 
